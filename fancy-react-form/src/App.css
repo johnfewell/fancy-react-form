@@ -26,3 +26,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.form-title {
+  text-align: left;
+  padding-left: 50px;
+
+}
