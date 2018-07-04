@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Continuing Education Certificates App</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <% if current_user.instructor.nil? && current_user.attendee_role %>
+      <%= render "unassigned_user_nav" %>
+    <% elsif user_signed_in? %>
+      <%= render "nav" %>
+    <% else %>
+      <%= render "logged_out_header" %>
+    <% end %>
+
+    <div class="container pt-3">
+
+      <% if !alert.nil? %>
+        <div class="flash-messages">
+          <div class="flash flash-warn">
+            <p id="alert"><%= octicon "alert" %> <%= alert %></p>
+          </div>
+        </div>
+      <% end %>
+
+      <% if !notice.nil? %>
+      <div class="flash-messages">
+        <div class="flash flash-success">
+          <p id="notice"><%= octicon "check" %> <%= notice %></p>
+        </div>
+      </div>
+    <% end %>
+
+
+      <%= yield %>
+
+      <%= render "footer" %>
+    </div>
+  </body>
+</html>

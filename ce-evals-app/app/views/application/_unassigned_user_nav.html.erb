@@ -1,0 +1,13 @@
+<nav class="UnderlineNav UnderlineNav--full" aria-label="Menu">
+
+ <div class="container-lg UnderlineNav-container">
+   <div class="UnderlineNav-body">
+     <%= image_tag "ce-cert-logo.png" %>
+     <%= link_to "Home", unassigned_users_path %>
+       <%= link_to destroy_user_session_path, method: :delete, class: "UnderlineNav-item" do %>
+        <%= octicon "sign-out" %>
+        Logout
+       <% end %>
+     </div>
+   </div>
+</nav>

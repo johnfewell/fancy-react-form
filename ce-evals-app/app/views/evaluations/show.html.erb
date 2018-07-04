@@ -1,0 +1,29 @@
+
+<h2>Evaluation: <%= @evaluation.name %></h2>
+<br />
+<h4>Questions</h4>
+<div class="mx-5">
+  <ul>
+      <% @questions.each do |q| %>
+      <li>
+        <%= q.content %>
+      </li>
+      <% end %>
+  </ul>
+</div>
+<br />
+
+<h4>Assigned to Course</h4>
+  <div class="mx-5">
+      <% if !@evaluation.course.nil? %>
+        <%= link_to @evaluation.course.title, @evaluation %>
+      <% else %>
+        Not assigned
+      <% end %>
+    </div>
+<br />
+
+<% if is_authorized?(@evaluation) && !@evaluation.finished_evaluations.any? %>
+  <%= link_to 'Edit', edit_evaluation_path(@evaluation) , class: "btn" %> |
+  <%= link_to 'Destroy', @evaluation, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
