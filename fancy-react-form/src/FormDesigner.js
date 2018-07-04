@@ -8,8 +8,10 @@ class FormDesigner extends Component {
     return (
       <div className="FormDesigner">
         <FormDesignerNav />
-        <QuestionPane />
-        <PreviewPane />
+        <div class="row">
+          <QuestionPane />
+          <PreviewPane />
+        </div>
       </div>
     );
   }

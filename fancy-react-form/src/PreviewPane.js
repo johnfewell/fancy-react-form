@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 const PreviewPane = () => {
 
     return (
-      <div>
+      <div class="col-sm-4">
         PreviewPane
       </div>
     )
