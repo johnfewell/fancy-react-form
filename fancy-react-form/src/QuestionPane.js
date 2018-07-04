@@ -4,7 +4,9 @@ import classNames from 'classnames/bind';
 const QuestionPane = () => {
 
     return (
-
+      <div>
+        QuestionPaneMenu
+      </div>
     )
 }
 
