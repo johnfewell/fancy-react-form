@@ -11,7 +11,7 @@ class FormDesigner extends Component {
       <div id="wrapper">
         <FormDesignerNav />
         <div class="row">
-          <QuestionPaneMenu />
+          
           <QuestionPane />
           <PreviewPane />
         </div>
