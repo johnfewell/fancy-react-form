@@ -5,7 +5,7 @@ const QuestionPaneMenu = () => {
 
     return (
       <menu>
-        <nav id="sidebar">
+        <nav id="sidebar" >
             <div class="sidebar-header">
                 <h3>Bootstrap Sidebar</h3>
             </div>

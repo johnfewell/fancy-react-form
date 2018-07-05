@@ -40,11 +40,21 @@
 #sidebar {
     width: 250px;
     position: fixed;
-    top: 25;
+    top: 60;
     left: 0;
     height: 100vh;
     z-index: 999;
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
+}
+
+.b-r{
+  border-right: thin black solid;
+  height: 100vh;
+  overflow: auto;
+}
+
+.margin_top_600px{
+  margin-top:600px;
 }
